@@ -5,9 +5,14 @@
     <meta charset="utf-8">
 
     <title>{% block title %}{{ SITE_NAME }}{% endblock title%}</title>
-    {% block head %}
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    {% endblock head%}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+		<script src="{{ STATIC_URL }}apps.js"></script>
+        <script src="{{ STATIC_URL }}dashboard.controller.js"></script>
+        <script src="{{ STATIC_URL }}services.js"></script>
+
+
+
   </head>
   <body>
     {% block header %}

@@ -2,8 +2,7 @@
 {% load i18n %}
   <head>
     <title>{% block title %}{{ SITE_NAME }}{% endblock title%}</title>
-    {% block head %}
-     {% endblock head%}
+
   </head>
   <body>
 
@@ -12,6 +11,11 @@
 
     {% block body %}
         this is dashboard body
+        <div ng-app="dashboardApp" ng-controller="DashboardController">
+
+        [{printme}]
+
+        </div>
     {% endblock body %}
 
     {% block footer %}

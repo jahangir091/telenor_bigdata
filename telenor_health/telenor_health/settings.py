@@ -29,6 +29,23 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+STATIC_URL = os.getenv('STATIC_URL', "/static/")
+
+# Additional directories which hold static files
+_DEFAULT_STATICFILES_DIRS = [
+    os.path.join(PROJECT_ROOT, "static"),
+]
+
+STATICFILES_DIRS = os.getenv('STATICFILES_DIRS', _DEFAULT_STATICFILES_DIRS)
+
+# List of finder classes that know how to find static files in
+# various locations.
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+)
+
 
 # Application definition
 
@@ -66,6 +83,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.static',
             ],
         },
     },
@@ -146,4 +164,5 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATIC_URL = '/static/'
+
+
