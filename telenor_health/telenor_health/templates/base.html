@@ -1,0 +1,34 @@
+{% load i18n  %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>{% block title %}{{ SITE_NAME }}{% endblock title%}</title>
+    {% block head %}
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    {% endblock head%}
+  </head>
+  <body>
+    {% block header %}
+
+    {% endblock header %}
+
+    {% block body %}
+    {% endblock body %}
+
+    {% block footer %}
+    {% endblock footer %}
+
+
+
+{#    <link href="{{ STATIC_URL }}lcmlutils/css/treetable/jquery.treetable.theme.default.css" rel="stylesheet" type="text/css" />#}
+{#    <script src="{{ STATIC_URL }}lcmlutils/js/lcmlExportXml.js"></script>#}
+
+    {% block extra_script %}
+
+    {% endblock extra_script %}
+
+
+  </body>
+</html>

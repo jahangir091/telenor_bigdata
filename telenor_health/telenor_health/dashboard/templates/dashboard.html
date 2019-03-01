@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load i18n %}
+  <head>
+    <title>{% block title %}{{ SITE_NAME }}{% endblock title%}</title>
+    {% block head %}
+     {% endblock head%}
+  </head>
+  <body>
+
+    {% block header %}
+    {% endblock header %}
+
+    {% block body %}
+        this is dashboard body
+    {% endblock body %}
+
+    {% block footer %}
+    {% endblock footer %}
+
+
+
+{#    <link href="{{ STATIC_URL }}lcmlutils/css/treetable/jquery.treetable.theme.default.css" rel="stylesheet" type="text/css" />#}
+{#    <script src="{{ STATIC_URL }}lcmlutils/js/lcmlExportXml.js"></script>#}
+
+    {% block extra_script %}
+
+    {% endblock extra_script %}
+
+
+  </body>
+</html>
