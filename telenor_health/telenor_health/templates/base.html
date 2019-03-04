@@ -7,9 +7,10 @@
     <title>{% block title %}{{ SITE_NAME }}{% endblock title%}</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-		<script src="{{ STATIC_URL }}apps.js"></script>
-        <script src="{{ STATIC_URL }}dashboard.controller.js"></script>
-        <script src="{{ STATIC_URL }}services.js"></script>
+
+
+        <link href="{{ STATIC_URL }}c3.min.css" rel="stylesheet" type="text/css" />
+
 
 
 
@@ -29,6 +30,13 @@
 
 {#    <link href="{{ STATIC_URL }}lcmlutils/css/treetable/jquery.treetable.theme.default.css" rel="stylesheet" type="text/css" />#}
 {#    <script src="{{ STATIC_URL }}lcmlutils/js/lcmlExportXml.js"></script>#}
+        <script src="{{ STATIC_URL }}apps.js"></script>
+        <script src="{{ STATIC_URL }}dashboard.controller.js"></script>
+        <script src="{{ STATIC_URL }}services.js"></script>
+
+        <script src="{{ STATIC_URL }}d3.min.js"></script>
+        <script src="{{ STATIC_URL }}c3.min.js"></script>
+        <script src="{{ STATIC_URL }}c3charts.js"></script>
 
     {% block extra_script %}
 

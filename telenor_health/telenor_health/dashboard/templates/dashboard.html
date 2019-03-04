@@ -10,10 +10,16 @@
     {% endblock header %}
 
     {% block body %}
-        this is dashboard body
         <div ng-app="dashboardApp" ng-controller="DashboardController">
 
-        [{printme}]
+            renew trend
+        <div id="renewal_trend_line_chart" style="height: 300px; width: 300px;"></div>
+        subscription trend
+        <div id="subscription_trend_based_barchart" style="height: 300px; width: 300px;"></div>
+        channel identification
+        <div id="channel_identification_bar_chart" style="height: 500px; width: 500px;"></div>
+        average membership duration
+        <div id="average_membership_duration_donut_chart" style="height: 300px; width: 300px;"></div>
 
         </div>
     {% endblock body %}

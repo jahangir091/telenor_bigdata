@@ -34,18 +34,6 @@
             return deferred.promise;
         }
 
-        this.approveLayers = function(data) {
-                return post('/api/layers/approve-multiple-layers/', data);
-            };
-
-        this.approveMaps = function(data) {
-                return post('/api/maps/approve-multiple-maps/', data);
-            };
-        this.approveDocuments = function (data) {
-            return post('/api/documents/approve-multiple-documents/', data);
-
-        }
-
 
 
         });

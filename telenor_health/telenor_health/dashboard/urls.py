@@ -8,4 +8,5 @@ urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='dashboard.html'), name='dashboard'),
     url(r'^index$', views.index, name='index'),
     url(r'^facts$', api.FactList.as_view(), name='facts'),
+    url(r'^api/report$', api.ReportApiView.as_view(), name='report-api'),
 ]
