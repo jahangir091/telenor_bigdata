@@ -46,6 +46,7 @@ class ReportApiView(APIView):
         for channel in channels:
             channel_identification_rate[channel] = facts.filter(first_retailer_or_channel=channel).count()
         report['channel_identification_rate'] = channel_identification_rate
+        report['number_of_channel'] = len(channels)
 
         average_membership_duration={}
         average_membership_duration['1 to 10 days'] = facts.filter(avg_membership_duration__lte=10).count()

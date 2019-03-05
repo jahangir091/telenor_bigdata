@@ -1,41 +1,117 @@
 {% extends 'base.html' %}
 {% load i18n %}
-  <head>
-    <title>{% block title %}{{ SITE_NAME }}{% endblock title%}</title>
+<head>
+    <title>{% block title %}{{ SITE_NAME }}{% endblock title %}</title>
 
-  </head>
-  <body>
+</head>
+<body>
 
-    {% block header %}
-    {% endblock header %}
+{% block header %}
+{% endblock header %}
 
-    {% block body %}
-        <div ng-app="dashboardApp" ng-controller="DashboardController">
+{% block body %}
 
-            renew trend
-        <div id="renewal_trend_line_chart" style="height: 300px; width: 300px;"></div>
-        subscription trend
-        <div id="subscription_trend_based_barchart" style="height: 300px; width: 300px;"></div>
-        channel identification
-        <div id="channel_identification_bar_chart" style="height: 500px; width: 500px;"></div>
-        average membership duration
-        <div id="average_membership_duration_donut_chart" style="height: 300px; width: 300px;"></div>
+
+    <div class="container" ng-app="dashboardApp" ng-controller="DashboardController" style="margin-top: 20px;">
+        <div class="row">
+            <div class="col-md-2">
+                <img src="{{ STATIC_URL }}logo.png" class="card-img-top" alt="..." style="height: 30px;">
+            </div>
+            <div class="col-md-3">
+                <h1 style="color: blue;">Tonic Dashboard</h1>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom: 5px;">
+            <div class="col-2">
+            </div>
+            <div class="col-3" style="background-color: #ff8300">
+                <div style="margin-top: 4px;">
+                    <div style="height: 25px; text-align: center; text-decoration-color: #00aced;">
+                        <h5 class="card-title">Total Member: [{reportData.total_member}]</h5>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-3" style="background-color: #00ad5f; margin-left: 5px;">
+                <div style="margin-top: 4px;">
+                    <div style="height: 25px; text-align: center; text-decoration-color: #00aced">
+                        <h5 class="card-title">Number of Channel: [{reportData.number_of_channel}]</h5>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-3" style="background-color: #17a2b8; margin-left: 3px;">
+                <div style="margin-top: 4px;">
+                    <div style="height: 25px; text-align: center; text-decoration-color: #00aced">
+                        <h5 class="card-title">Number of Paid Subscription: [{reportData.subscription_trend.paid_subscriber}]</h5>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">membership renewal trend</h5>
+                        <div id="renewal_trend_line_chart" style="height: 200px;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">subscription status</h5>
+                        <div id="subscription_trend_based_barchart" style="height: 200px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">average membership duration</h5>
+                        <div id="average_membership_duration_donut_chart" style="height: 200px;"></div>
+                    </div>
+                </div>
+            </div>
 
         </div>
-    {% endblock body %}
 
-    {% block footer %}
-    {% endblock footer %}
+        <div class="row">
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">member vs first channel identification</h5>
+                        <div id="channel_identification_bar_chart" style="height: 300px;"></div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+{% endblock body %}
+
+{% block footer %}
+{% endblock footer %}
 
 
 
 {#    <link href="{{ STATIC_URL }}lcmlutils/css/treetable/jquery.treetable.theme.default.css" rel="stylesheet" type="text/css" />#}
 {#    <script src="{{ STATIC_URL }}lcmlutils/js/lcmlExportXml.js"></script>#}
 
-    {% block extra_script %}
+{% block extra_script %}
 
-    {% endblock extra_script %}
+{% endblock extra_script %}
 
 
-  </body>
+</body>
 </html>
