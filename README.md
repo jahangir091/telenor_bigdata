@@ -11,13 +11,13 @@ Install python in your machine. I used ubuntu os where python is installed by de
 
 open terminal in your computer and run the command below:
 
-  ***git clone https://github.com/jahangir091/telenor_bigdata.git***
+    git clone https://github.com/jahangir091/telenor_bigdata.git
   
  This command will clone the project from github to your local machine.
  
  Now go to the directory **telenor_bigdata/telenor_health** and run the command below:
  
-  ***pip install -r requirements.txt***
+    pip install -r requirements.txt
   
 This command will install necessary python libraries in your computer.
 
@@ -26,12 +26,12 @@ This command will install necessary python libraries in your computer.
 
 Now run the project by the following command:
 
-  ***python manage.py runserver***
+    python manage.py runserver
   
 This command will run your django project at **localhost:8000** 
 So now go to the browser and got to this url : 
 
-  ***http://localhost:8000***
+    http://localhost:8000
   
 You will see a dashboard named Tonic Dashboard.
 
